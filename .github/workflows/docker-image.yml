@@ -1,0 +1,20 @@
+name: Docker Image CI dev1
+ 
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+
+  job1: 
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-app1
+    - name: LISTING DOCKER IMAGES
+      run: docker images
