@@ -1,10 +1,10 @@
-name: release pipeline test
+name: release pipeline demo
  
 on:
   push:
-    branches: [ "test" ]
+    branches: [ "demo" ]
   pull_request:
-    branches: [ "test" ]
+    branches: [ "demo" ]
 
 jobs:
 
